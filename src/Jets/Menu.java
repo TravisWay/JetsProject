@@ -4,80 +4,9 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void Run() {
 		Scanner input = new Scanner(System.in);
-		Menu();
 
-	}
-
-	public static void CalcRange() {
-		float temp2 = 0;
-		int big = 0;
-		for (int i = 1; i < Hangar.jets.length; i++) {
-			if (Hangar.jets[i] != null) {
-				if (Hangar.jets[i].getRange() > temp2) {
-					temp2 = Hangar.jets[i].getRange();
-					big = i;
-				}
-
-			}
-
-		}
-		System.out.println("The jet with the longest range is \n\n"+ Hangar.jets[big].getModel());
-		System.out.println("Speed = Mach " + Hangar.jets[big].getSpeed());
-		System.out.println("Range is " + Hangar.jets[big].getRange() + " miles");
-		System.out.println("Capacity is " + Hangar.jets[big].getCapacity() + " passengers");;
-	}
-
-	public static void CalcSpeed() {
-		float temp = 0;
-		int fast = 0;
-		for (int i = 1; i < Hangar.jets.length; i++) {
-			if (Hangar.jets[i] != null) {
-				if (Hangar.jets[i].getSpeed() > temp) {
-					temp = Hangar.jets[i].getSpeed();
-					fast = i;
-				}
-
-			}
-
-		}
-		System.out.println("The fastest jet is \n\n"+ Hangar.jets[fast].getModel());
-		System.out.println("Speed = Mach " + Hangar.jets[fast].getSpeed());
-		System.out.println("Range is " + Hangar.jets[fast].getRange() + " miles");
-		System.out.println("Capacity is " + Hangar.jets[fast].getCapacity() + " passengers");
-
-	}
-	public static void Print(){
-		for (int i = 0; i < Hangar.jets.length; i++) {
-			if (Hangar.jets[i] != null) {
-				System.out.println("\n\nName = " + Hangar.jets[i].getModel());
-				System.out.println("Speed = Mach " + Hangar.jets[i].getSpeed());
-				System.out.println("Range is " + Hangar.jets[i].getRange() + " miles");
-				System.out.println("Capacity is " + Hangar.jets[i].getCapacity() + " passengers");
-
-			}
-
-		}
-	}
-	
-	public static void Add(){
-		
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the jet's name");
-		String model = input.next();
-		System.out.println("Enter the jet's speed(MPH)");
-		float speed = input.nextFloat();
-		System.out.println("Enter the jet's range(miles)");
-		float range = input.nextFloat();
-		System.out.println("Enter the jet's capacity(seating)");
-		int capacity = input.nextInt();
-		Hangar.addJet(new Jet(model, speed, range, capacity));
-	}
-	public static void Menu(){
-		Scanner input = new Scanner(System.in);
-		
 		boolean quit = false;
 		Jet Jetone = new Jet("F22", 1498, 1839, 2);
 		Jet Jettwo = new Jet("F16", 1350, 2622, 2);
@@ -90,21 +19,25 @@ public class Menu {
 		Hangar.addJet(Jetthree);
 		Hangar.addJet(Jetfour);
 		Hangar.addJet(Jetfive);
-			System.out.println("\nHello, Welcome to THE HANGAR.\nWhat would you like to do today"); 
-			while (quit == false) {
-			System.out.println("\n\nChoose ONE\nEnter 1 for List Fleet"
-							+ "\nEnter 2 for View fastest jet" + "\nEnter 3 for View jet with the longest range"
-							+ "\nEnter 4 for Add a jet to Fleet" + "\nEnter 5 for Quit");
+		System.out.println("\nHello, Welcome to THE HANGAR.\n\nWhat would you like to do today");
+		while (quit == false) {
+			System.out.println("\n\nChoose ONE\nEnter 1 for List Fleet" + "\nEnter 2 for View fastest jet"
+					+ "\nEnter 3 for View jet with the longest range" + "\nEnter 4 for Add a jet to Fleet"
+					+ "\nEnter 5 for Quit");
 			int Menuoption = input.nextInt();
 
 			switch (Menuoption) {
-			case 1:Print();
+			case 1:
+				Hangar.Print();
 				break;
-			case 2:CalcSpeed();
+			case 2:
+				Hangar.CalcSpeed();
 				break;
-			case 3:CalcRange();
+			case 3:
+				Hangar.CalcRange();
 				break;
-			case 4:Add();				
+			case 4:
+				Hangar.Add();
 				break;
 			case 5:
 				quit = true;
@@ -112,15 +45,7 @@ public class Menu {
 			}
 
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }
