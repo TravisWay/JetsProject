@@ -24,9 +24,10 @@ public class Menu {
 			}
 
 		}
-		System.out.println("The jet with the longest range is the " + Hangar.jets[big].getModel() + " with a range of "
-				+ Hangar.jets[big].getRange() + " miles.");
-
+		System.out.println("The jet with the longest range is \n\n"+ Hangar.jets[big].getModel());
+		System.out.println("Speed = Mach " + Hangar.jets[big].getSpeed());
+		System.out.println("Range is " + Hangar.jets[big].getRange() + " miles");
+		System.out.println("Capacity is " + Hangar.jets[big].getCapacity() + " passengers");;
 	}
 
 	public static void CalcSpeed() {
@@ -42,8 +43,10 @@ public class Menu {
 			}
 
 		}
-		System.out.println("The fastest jet is " + Hangar.jets[fast].getModel() + " with a speed of Mach "
-				+ Hangar.jets[fast].getSpeed());
+		System.out.println("The fastest jet is \n\n"+ Hangar.jets[fast].getModel());
+		System.out.println("Speed = Mach " + Hangar.jets[fast].getSpeed());
+		System.out.println("Range is " + Hangar.jets[fast].getRange() + " miles");
+		System.out.println("Capacity is " + Hangar.jets[fast].getCapacity() + " passengers");
 
 	}
 	public static void Print(){
