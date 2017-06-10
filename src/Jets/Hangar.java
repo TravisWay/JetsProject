@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Hangar {
 
 	public static Jet[] jets = new Jet[100];
-
+	
 	// Takes the object Jet and adds it to the jets array provided a null value
 	// is available
 	public static void addJet(Jet j1) {
@@ -32,6 +32,7 @@ public class Hangar {
 		}
 
 		System.out.println("\nThe jet with the longest range is \n\n" + Hangar.jets[big].getModel());
+		System.out.println("\nPilot = " + Hangar.jets[big].getPilot().getName());
 		System.out.println("Speed = Mach " + Hangar.jets[big].getSpeed());
 		System.out.println("Range is " + Hangar.jets[big].getRange() + " miles");
 		System.out.println("Capacity is " + Hangar.jets[big].getCapacity() + " passengers");
@@ -51,6 +52,7 @@ public class Hangar {
 
 		}
 		System.out.println("\nThe fastest jet is \n\n" + Hangar.jets[fast].getModel());
+		System.out.println("\nPilot = " + Hangar.jets[fast].getPilot().getName());
 		System.out.println("Speed = Mach " + Hangar.jets[fast].getSpeed());
 		System.out.println("Range is " + Hangar.jets[fast].getRange() + " miles");
 		System.out.println("Capacity is " + Hangar.jets[fast].getCapacity() + " passengers");
@@ -61,6 +63,7 @@ public class Hangar {
 		for (int i = 0; i < Hangar.jets.length; i++) {
 			if (Hangar.jets[i] != null) {
 				System.out.println("\nName = " + Hangar.jets[i].getModel());
+				System.out.println("\nPilot = " + Hangar.jets[i].getPilot().getName());
 				System.out.println("Speed = Mach " + Hangar.jets[i].getSpeed());
 				System.out.println("Range is " + Hangar.jets[i].getRange() + " miles");
 				System.out.println("Capacity is " + Hangar.jets[i].getCapacity() + " passengers");
@@ -74,14 +77,15 @@ public class Hangar {
 	public static void Add() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the jet's name");
-		String model = input.next();
+		String model = input.nextLine();
 		System.out.println("Enter the jet's speed(MPH) and numbers only please");
 		float speed = input.nextFloat();
 		System.out.println("Enter the jet's range(miles) and numbers only please");
 		float range = input.nextFloat();
 		System.out.println("Enter the jet's capacity(seating) and numbers only please");
 		int capacity = input.nextInt();
-		Hangar.addJet(new Jet(model, speed, range, capacity));
+		Pilot name = Barracks.pilots[Barracks.random()];
+		Hangar.addJet(new Jet(model, speed, range, capacity, name));
 		//input.close();
 	}
 

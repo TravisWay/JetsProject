@@ -1,19 +1,28 @@
 package Jets;
 
-public class Jet {
+public class Jet{
 
 	private String model;
 	private float speed;
 	private float range;
 	private int capacity;
+	private Pilot pilot;
+	
+	public Pilot getPilot() {
+		return pilot;
+	}
+	public void setPilot(Pilot pilot) {
+		this.pilot = pilot;
+	}
 	
 	//Constructor for jet objects requiring 4 parameters, and then sets those values
-	public Jet(String model, float speed, float range, int capacity) {
+	public Jet(String model, float speed, float range, int capacity, Pilot pilot) {
 		super();
 		setCapacity(capacity);
 		setModel(model);
 		setRange(range);
 		setSpeed(speed);
+		setPilot(pilot);
 	}
 	public String getModel() {
 		return model;
