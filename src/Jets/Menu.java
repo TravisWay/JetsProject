@@ -19,7 +19,9 @@ public class Menu {
 		Hangar.addJet(Jetthree);
 		Hangar.addJet(Jetfour);
 		Hangar.addJet(Jetfive);
+		
 		System.out.println("\nHello, Welcome to THE HANGAR.\n\nWhat would you like to do today?");
+		
 		while (quit == false) {
 			System.out.println("\n\nChoose ONE\nEnter 1 for List Fleet" + "\nEnter 2 for View fastest jet"
 					+ "\nEnter 3 for View jet with the longest range" + "\nEnter 4 for Add a jet to Fleet"
@@ -40,13 +42,11 @@ public class Menu {
 				Hangar.Add();
 				break;
 			case 5:
-				System.out.println("\n\nGoodbye");
+				System.out.println("\nGoodbye");
 				quit = true;
 				break;
 			}
-
 		}
-
+		input.close();
 	}
-
 }

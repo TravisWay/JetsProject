@@ -1,11 +1,9 @@
 package Jets;
 
 public class Run {
-
+	
+	//Runs the jets program
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Menu.Run();
-
 	}
-
 }

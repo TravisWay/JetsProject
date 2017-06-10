@@ -14,40 +14,30 @@ public class Jet {
 		setModel(model);
 		setRange(range);
 		setSpeed(speed);
-		
 	}
-
 	public String getModel() {
 		return model;
 	}
-
 	public void setModel(String model) {
 		this.model = model;
 	}
-
 	public float getSpeed() {
 		return speed;
 	}
-
 	public void setSpeed(float speed) {
 		float Mach = (float) (speed/761.21);		
 		this.speed = Mach;
 	}
-
 	public float getRange() {
 		return range;
 	}
-
 	public void setRange(float range) {
 		this.range = range;
 	}
-
 	public int getCapacity() {
 		return capacity;
 	}
-
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
-
 }
