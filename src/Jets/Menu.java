@@ -13,12 +13,16 @@ public class Menu{
 		Pilot Ender = new Pilot("Andrew Wiggin");
 		Pilot Mazer = new Pilot("Mazer Rackham");
 		Pilot Dink = new Pilot("Dink Meeker");
+		Pilot Peter = new Pilot("Peter Wiggin");
+		Pilot Valentine = new Pilot("Valentine Wiggin");
 		
 		Barracks.addPilot(Bean);
 		Barracks.addPilot(Petra);
 		Barracks.addPilot(Ender);
 		Barracks.addPilot(Mazer);
 		Barracks.addPilot(Dink);
+		Barracks.addPilot(Peter);
+		Barracks.addPilot(Valentine);
 		
 		
 		

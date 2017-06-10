@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class Barracks {
 
-	public static Pilot [] pilots = new Pilot[30];
+	public static Pilot[] pilots = new Pilot[30];
 
-	// Takes the object Pilot and adds it to the Pilot array provided a null value is available
+	public Barracks() {
+
+	}
+
+	// Takes the object Pilot and adds it to the Pilot array provided a null
+	// value is available
 	public static void addPilot(Pilot p1) {
 		for (int i = 0; i < pilots.length; i++) {
 			if (pilots[i] == null) {
@@ -20,7 +25,7 @@ public class Barracks {
 	public static void Print() {
 		for (int i = 0; i < Barracks.pilots.length; i++) {
 			if (Barracks.pilots[i] != null) {
-				System.out.println("Pilot "+(i+1)+" = " + Barracks.pilots[i].getName() + "\n");
+				System.out.println("Pilot " + (i + 1) + " = " + Barracks.pilots[i].getName() + "\n");
 
 			}
 		}
@@ -36,12 +41,14 @@ public class Barracks {
 		Barracks.addPilot(new Pilot(Name));
 
 	}
-	//Calculates a random number between 0-14 and returns it
+
+	// Calculates a random number between 0-14 and returns it
 	public static int random() {
-		int rand = (int) Math.ceil(Math.random() * 14);
+		int rand = (int) (Math.floor((Math.random() * 15)));
 		while (pilots[rand] == null) {
-			rand = (int) Math.ceil(Math.random() * 14);
+			rand = (int) (Math.floor((Math.random() * 15)));
 		}
 		return rand;
 	}
+
 }
