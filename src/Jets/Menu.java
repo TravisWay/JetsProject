@@ -13,13 +13,13 @@ public class Menu {
 		Jet Jetthree = new Jet("G650", 610, 8053, 18);
 		Jet Jetfour = new Jet("Boeing747", 570, 9200, 524);
 		Jet Jetfive = new Jet("Sr71", 2200, 3355, 2);
-
+		
 		Hangar.addJet(Jetone);
 		Hangar.addJet(Jettwo);
 		Hangar.addJet(Jetthree);
 		Hangar.addJet(Jetfour);
 		Hangar.addJet(Jetfive);
-		System.out.println("\nHello, Welcome to THE HANGAR.\n\nWhat would you like to do today");
+		System.out.println("\nHello, Welcome to THE HANGAR.\n\nWhat would you like to do today?");
 		while (quit == false) {
 			System.out.println("\n\nChoose ONE\nEnter 1 for List Fleet" + "\nEnter 2 for View fastest jet"
 					+ "\nEnter 3 for View jet with the longest range" + "\nEnter 4 for Add a jet to Fleet"
@@ -40,6 +40,7 @@ public class Menu {
 				Hangar.Add();
 				break;
 			case 5:
+				System.out.println("\n\nGoodbye");
 				quit = true;
 				break;
 			}

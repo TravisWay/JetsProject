@@ -4,13 +4,8 @@ import java.util.Scanner;
 
 public class Hangar {
 
-	static Jet[] jets = new Jet[100];
-
-	public Hangar(int size) {
-		super();
-		Jet[] jets = new Jet[size];
-		setJets(jets);
-	}
+	public static Jet[] jets = new Jet[100];
+	
 	//Takes the object Jet and adds it to the jets array provided a null value is available
 	public static void addJet(Jet j1) {
 		for (int i = 0; i < jets.length; i++) {
@@ -22,15 +17,7 @@ public class Hangar {
 		}
 
 	}
-
-	public Jet[] getJets() {
-		return jets;
-	}
-
-	public void setJets(Jet[] jets) {
-		this.jets = jets;
-	}
-	//Calculates the jet object with longest range in the jets array by going through the entire array and comparing jet object range values
+	//Calculates the jet object with longest range in the jets array by going through the entire array and comparing jet object range values. Prints the jet object.
 	public static void CalcRange() {
 		float temp2 = 0;
 		int big = 0;
@@ -48,7 +35,7 @@ public class Hangar {
 		System.out.println("Capacity is " + Hangar.jets[big].getCapacity() + " passengers");
 		;
 	}
-
+	//Calculates the jet object that is the fastest in the jets array by going through the entire array and comparing jet object speed values.  Prints the jet object.
 	public static void CalcSpeed() {
 		float temp = 0;
 		int fast = 0;
@@ -65,7 +52,8 @@ public class Hangar {
 		System.out.println("Capacity is " + Hangar.jets[fast].getCapacity() + " passengers");
 
 	}
-
+	
+	//Prints off the entire jets array with each objects values.
 	public static void Print() {
 		for (int i = 0; i < Hangar.jets.length; i++) {
 			if (Hangar.jets[i] != null) {
@@ -78,7 +66,8 @@ public class Hangar {
 
 		}
 	}
-
+	
+	//Allows user to add jet objects to the fleet by prompting for the necessary parameters and then searches the array for a null value to add that jet object in its place.
 	public static void Add() {
 
 		Scanner input = new Scanner(System.in);

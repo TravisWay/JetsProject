@@ -6,6 +6,9 @@ This is my week 2 homework project.   Key Topics include:
 *OOP
 *Inheritance
 *Polymorphism
+*Refactoring
+
+
 
 The user will be prompted by a menu screen as the program is run.  They will have the choice of seeing a list of Jets in the hangar, finding the fastest plane, finding the plane with the longest range, adding a plane to the hangar, or quitting the application.
 

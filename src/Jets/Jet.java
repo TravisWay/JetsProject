@@ -6,7 +6,8 @@ public class Jet {
 	private float speed;
 	private float range;
 	private int capacity;
-
+	
+	//Constructor for jet objects requiring 4 parameters, and then sets those values
 	public Jet(String model, float speed, float range, int capacity) {
 		super();
 		setCapacity(capacity);
