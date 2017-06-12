@@ -6,8 +6,9 @@ public class Menu{
 
 	public static void Run() {
 		Scanner input = new Scanner(System.in);
-
 		boolean quit = false;
+		
+		//Creates the original pilots and jets and adds them to the hangar
 		Pilot Bean = new Pilot("Julian Delphiki Jr");
 		Pilot Petra = new Pilot("Petra Arkanian");
 		Pilot Ender = new Pilot("Andrew Wiggin");
@@ -41,6 +42,8 @@ public class Menu{
 		
 		System.out.println("\nHello, Welcome to THE HANGAR.\n\nWhat would you like to do today?");
 		
+		
+		//While the user has not selected quit, the program will continue to loop
 		while (quit == false) {
 			System.out.println("\n\nChoose ONE\nEnter 1 to List Fleet" + "\nEnter 2 to View fastest jet"
 					+ "\nEnter 3 to View jet with the longest range" + "\nEnter 4 to Add a jet to Fleet"
